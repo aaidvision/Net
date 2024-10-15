@@ -1,0 +1,79 @@
+Public Class Form1
+
+ Dim second As Integer = 0
+
+ Dim minute As Integer = 0
+
+ Dim hours As Integer = 0
+
+ Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Timer1.Tick
+
+ second = second + 1
+
+ Label2.Text = second
+
+ If (second = 60) Then
+
+ minute = minute + 1
+
+ second = 0
+
+ Label3.Text = minute
+
+ End If
+
+ If (minute = 60) Then
+
+ hours = hours + 1
+
+ second = 0
+
+ minute = 0
+
+ Label3.Text = minute
+
+ Label4.Text = hours
+
+ End If
+
+ End Sub
+
+ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button1.Click
+
+ Timer1.Start()
+
+ End Sub
+
+ Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button2.Click
+
+ Timer1.Stop()
+
+ End Sub
+
+ Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button3.Click
+
+ Timer1.Stop()
+
+ minute = 0
+
+ second = 0
+
+ hours = 0
+
+ Label2.Text = "00"
+
+ Label3.Text = "00"
+
+ Label4.Text = "00"
+
+ End Sub
+
+End Class
