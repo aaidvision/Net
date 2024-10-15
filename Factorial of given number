@@ -1,0 +1,31 @@
+Public Class Form1
+
+ Function fact(ByVal a As Integer) As Integer
+
+ Dim f As Integer
+
+ f = 1
+
+ For i = 1 To a
+
+ f = f * i
+
+ Next
+
+ fact = f
+
+ End Function
+
+ Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+ Dim n, r As Integer
+
+ n = TextBox1.Text
+
+ r = fact(n)
+
+ MsgBox("Factorial is :" & r, vbInformation, "Factorial")
+
+ End Sub
+
+End Class
