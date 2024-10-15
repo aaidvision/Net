@@ -1,0 +1,45 @@
+Public Class Form1
+
+ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button1.Click
+
+ TreeView1.Nodes.Add("Shapes")
+
+ TreeView1.Nodes.Add("Colors")
+
+ End Sub
+
+ Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button2.Click
+
+ Dim snode As TreeNode
+
+ snode = TreeView1.Nodes(0)
+
+ snode.Nodes.Add("Square")
+
+ snode.Nodes.Add("Triangle")
+
+ snode.Nodes.Add("Circle")
+
+ End Sub
+
+ Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button3.Click
+
+ Dim cnode As TreeNode
+
+ cnode = TreeView1.Nodes(1)
+
+ cnode.Nodes.Add("Pink")
+
+ cnode.Nodes.Add("Maroon")
+
+ cnode.Nodes.Add("Teal")
+
+ End Sub
+
+End Class
