@@ -1,0 +1,43 @@
+Public Class Form1
+
+ Dim num As Integer
+
+ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button1.Click
+
+ Label3.Text = ""
+
+ For Each c1 As CheckBox In Panel1.Controls
+
+ If c1.Checked Then
+
+ Label3.Text &= c1.Text & vbCrLf
+
+ End If
+
+ Next
+
+ MsgBox("Can i ask question from maths")
+
+ End Sub
+
+ Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button2.Click
+
+ num = ListBox1.SelectedItem
+
+ If RadioButton1.Checked = True Then
+
+ MsgBox(num * num)
+
+ Else
+
+ MsgBox(num * num * num)
+
+ End If
+
+ End Sub
+
+End Class
