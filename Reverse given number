@@ -1,0 +1,43 @@
+Public Class Form1
+
+ Dim r As Integer
+
+ Public Function Reverse(ByVal rn As Integer)
+
+ Dim numbers = Val(TextBox1.Text)
+
+ Dim result As Integer
+
+ While numbers > 0
+
+ rn = numbers Mod 10
+
+ result = result * 10 + rn
+
+ numbers = numbers \ 10
+
+ End While
+
+ Reverse = result
+
+ End Function
+
+ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button1.Click
+
+ TextBox2.Text = Reverse(r)
+
+ End Sub
+
+ Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button2.Click
+
+ TextBox1.Text = ""
+
+ TextBox2.Text = ""
+
+ End Sub
+
+End Class
