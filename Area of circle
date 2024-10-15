@@ -1,0 +1,17 @@
+Module Module1
+
+ Sub Main()
+
+ Dim a, r As Double
+
+ Console.Write("Enter the radius:")
+
+ r = Console.ReadLine()
+
+ a = 3.14 * r * r
+
+ Console.WriteLine("Area of Circle:{0}", a)
+
+ End Sub
+
+End Module
