@@ -1,0 +1,53 @@
+Public Class Form1
+
+ Private Sub SaveToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As 
+
+System.EventArgs) Handles SaveToolStripMenuItem.Click
+
+ SaveFileDialog1.Filter = "TXT Files (*.txt*)|*.txt"
+
+ If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK _
+
+ Then
+
+ My.Computer.FileSystem.WriteAllText _
+
+ (SaveFileDialog1.FileName, RichTextBox1.Text, True)
+
+ End If
+
+ End Sub
+
+ Private Sub CloseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As 
+
+System.EventArgs) Handles CloseToolStripMenuItem.Click
+
+ End
+
+ End Sub
+
+ Private Sub CutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As 
+
+System.EventArgs) Handles CutToolStripMenuItem.Click
+
+ RichTextBox1.Cut()
+
+ End Sub
+
+ Private Sub CopyToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As 
+
+System.EventArgs) Handles CopyToolStripMenuItem.Click
+
+ RichTextBox1.Copy()
+
+ End Sub
+
+ Private Sub PasteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As 
+
+System.EventArgs) Handles PasteToolStripMenuItem.Click
+
+ RichTextBox1.Paste()
+
+ End Sub
+
+End Class
