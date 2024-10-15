@@ -1,0 +1,31 @@
+Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 
+
+Button1.Click
+
+ Dim c As Char
+
+ c = UCase(TextBox1.Text)
+
+ If c = "A" Or c = "E" Or c = "I" Or c = "O" Or c = "U" Then
+
+ TextBox2.Text = "VOWEL"
+
+ Else
+
+ TextBox2.Text = "NOT VOWEL"
+
+ End If
+
+ End Sub
+
+ Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button2.Click
+
+ TextBox1.Text = ""
+
+ TextBox2.Text = ""
+
+ End Sub
+
+End Class
