@@ -1,0 +1,17 @@
+Public Class Form1
+
+ Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+ Dim a, b, c As Integer
+
+ a = InputBox("Enter the a value")
+
+ b = InputBox("Enter the b value")
+
+ c = a + b
+
+ MsgBox("The Addition of two numbers is" & c, vbInformation, "ADDITION")
+
+ End Sub
+
+End Class
