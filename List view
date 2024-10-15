@@ -1,0 +1,45 @@
+Public Class Form1
+
+ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles Button1.Click
+
+ Dim str(4) As String
+
+ Dim itm As ListViewItem
+
+ str(0) = TextBox1.Text 'Accept value from the user. 
+
+ str(1) = TextBox2.Text
+
+ str(2) = TextBox3.Text
+
+ itm = New ListViewItem(str)
+
+ ListView1.Items.Add(itm) 'Add the items into the ListView 
+
+ End Sub
+
+ Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+Handles MyBase.Load
+
+ ListView1.View = View.Details ' Display the List in details 
+
+ ListView1.GridLines = True ' Set the Grid lines 
+
+ ListView1.Columns.Add("Student Name", 100, HorizontalAlignment.Left) ' set the name of 
+
+column 
+
+ ListView1.Columns.Add("Roll Number", 100, HorizontalAlignment.Left) ' set the name of 
+
+column 
+
+ ListView1.Columns.Add("Class", 100, HorizontalAlignment.Left) ' set the name of column 
+
+ ListView1.BackColor = Color.LightSkyBlue
+
+ End Sub
+
+End Class
